@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
 
-    <div class="text-center mw-500 m-auto">
+        <div class="text-center mw-500 m-auto">
         <div class="m-5">
             <h4>
                 {{ target_user.username }}
@@ -10,6 +11,16 @@
         </div>
         <div>
             {{ target_user.date_joined }}
+        </div>
+        <div>
+            <a href="{% url 'accountapp:update' pk=target_user.pk %}">
+                Update Info
+            </a>
+        </div>
+        <div>
+            <a href="{% url 'accountapp:delete' pk=target_user.pk %}">
+                Quit
+            </a>
         </div>
     </div>
 
