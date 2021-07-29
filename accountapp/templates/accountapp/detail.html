@@ -11,7 +11,8 @@
                  alt="profile image">
             <h2 class="NMS_B">
                 {{ target_user.profile.nickname }}
-                <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
+                <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}"
+                    class="material-icons round_button">
                     edit
                 </a>
             </h2>
